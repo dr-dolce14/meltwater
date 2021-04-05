@@ -6,7 +6,7 @@ const ImportFromFileBody = () => {
     
     const handleFileRead = (e) => {
       const content = fileReader.result;
-      console.log(content)
+      console.log(content.split(" "))
       // do something with the 'content'
       setText(content)
       
