@@ -18,19 +18,19 @@ const ImportFromFileBody = () => {
     };
 
     const redactThis = (text) => {
-        let keywords = " \"sample\",\"redact\",\"us\" "
-        let omg = keywords.replace(/"([^"]+(?="))"/g, '$1').trim()
-        let holycow = omg.split(",")
-        let thing = text.split(" ")
-            for (let i = 0; i < thing.length; i++) {
-                for (let j = 0; j < holycow.length; j++) {
-                    if (holycow[j] === thing[i]) {
-                    thing[i] = "XXX"   
+        let keywords = 'sample, redact, "of", us'
+        let stringReplace = keywords.replace(/"([^"]+(?="))"/g,'$1').trim()
+        let badArray = stringReplace.split(", ")
+        let docArray = text.split(" ")
+            for (let i = 0; i < docArray.length; i++) {
+                for (let j = 0; j < badArray.length; j++) {
+                    if (badArray[j] === docArray[i]) {
+                    docArray[i] = "XXX"   
                     }         
       
                 }
             }
-            return thing.join(" ")
+            return docArray.join(" ")
     }
     
     return <div className='upload-expense'>
