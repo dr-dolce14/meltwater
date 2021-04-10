@@ -9,6 +9,7 @@ An SPA that:
 
 
 # To run the React App
+In the repo directory:
 - 'npm install'
 - 'npm start'
     - Runs the app in development mode (can be viewed in the browser at http://localhost:3000)
