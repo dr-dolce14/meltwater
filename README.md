@@ -1,71 +1,36 @@
-# Getting Started with Create React App
+# Meltwater Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An SPA that:
+- accepts an uploaded plain text document
+- redacts words from that text document (based on keywords passed into the redacting function)
+- outputs to the screen the document text with "XXX" in place of any keywords found in the document.
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `yarn start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# To run the React App
+- 'npm install'
+- 'npm start'
+    - Runs the app in development mode (can be viewed in the browser at http://localhost:3000)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Example 
+- file (needs to be in plain text format):
+[Meltwater.txt](https://github.com/dr-dolce14/meltwater/files/6290340/Meltwater.txt)
 
-### `yarn build`
+<img width="695" alt="Screen Shot 2021-04-10 at 1 15 29 PM" src="https://user-images.githubusercontent.com/60359533/114278679-e9e87280-99fe-11eb-92f4-b0f6b20e75e3.png">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- keywords provided in function:  'Hello world "boston red sox", "Pepperoni Pizza" "Cheese Pizza,", beer, here, redact'
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Ouput:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Screen Shot 2021-04-10 at 1 15 01 PM](https://user-images.githubusercontent.com/60359533/114278765-49468280-99ff-11eb-8ba5-d8e0178c6493.png)
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# meltwater
+### Limitations (that I know of at the moment)
+- have not accounted for carriage returns in original plain text document.
+- cannot figure out how to replace punctuation if it is removed along with a redacted word.
+- keywords passed into the function, so assuming I am provided with a list of keywords as the engineer that I can input into the code; with more time, I was thinking of adding an input form for keywords and storing them in a backend. That data can then be fetched and passed into the function whenever a document is uploaded.
