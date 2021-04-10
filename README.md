@@ -32,5 +32,6 @@ An SPA that:
 
 ### Limitations (that I know of at the moment)
 - have not accounted for carriage returns in original plain text document.
+- could not account for single quotes around phrases if those phrases were included in a string.
 - cannot figure out how to replace punctuation if it is removed along with a redacted word.
 - keywords passed into the function, so assuming I am provided with a list of keywords as the engineer that I can input into the code; with more time, I was thinking of adding an input form for keywords and storing them in a backend. That data can then be fetched and passed into the function whenever a document is uploaded.
